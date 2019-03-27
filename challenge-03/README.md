@@ -1,6 +1,6 @@
 # Desafio da semana #3
 
-//```js
+```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 var objeto = {};
 
@@ -199,4 +199,4 @@ pessoa.apresentacao = function() {
 // Agora, apresente-se ;)
 pessoa.apresentacao(); //'Olá, eu sou a Deborah Campos, tenho 32 anos, 1.65, meu peso é 69 e, só hoje, eu já caminhei 60 metros!'
 
-//```
+//
