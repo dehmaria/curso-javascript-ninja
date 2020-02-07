@@ -1,5 +1,5 @@
 (function(){
-	'use strict'
+	'use strict';
 	/*
 	1. Envolva todo o conteúdo desse desafio em uma IIFE.
 	2. Adicione a diretiva 'use strict';
@@ -17,7 +17,7 @@
 	*/
 	console.log( 'As letras do seu nome:' );
 	var name = 'Deborah';
-	for (var i = 0; i < name.length; i++){
+	for (var i = 0, len = name.length; i < len; i++){
 		console.log(name.charAt(i).toUpperCase() + ' é a ' + (i + 1)  + ' letra do meu nome.');
 	}
 
@@ -92,9 +92,9 @@
 	Ex.: Nomes que deveriam funcionar: "Fernando", "RoBertO", "gabriEla", etc.
 	*/
 	console.log( '\nNome com letras intercaladas entre caixa alta e baixa:' );
-	var myName = 'DeBorAh';
+	var myName = 'DEborAh MARIA';
 	var newName = '';
-	for(i = 0; i < myName.length; i++){
+	/*for(i = 0; i < myName.length; i++){
 		if (i % 2 === 0){
 			var letterName = myName.charAt(i).toUpperCase();
 			newName = newName.concat(letterName);
@@ -102,7 +102,15 @@
 			letterName = myName.charAt(i).toLowerCase();
 			newName = newName.concat(letterName);
 		}
-	}
-	console.log(newName);
+	}*/
+	newName = myName.split('');
+	var arrName = newName.map(function(item, index){
+		if(index % 2 === 0){
+			return item.toUpperCase();
+		} else {
+			return item.toLowerCase();
+		}
+	});
+	console.log(arrName.join(''));
 	
 })();
